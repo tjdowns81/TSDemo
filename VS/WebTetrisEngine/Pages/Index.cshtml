@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "CI/CD Deployment Tetris Engine Test";
+}
+
+<div class="text-center">
+    <h1>Simple Tetris Solver hosted in Kubernetes Cluster</h1>
+</div>
+<br/>
+<br/>
+<p>Select a file to solve and click Submit</p>
+<form method="post" enctype="multipart/form-data">
+    <input id="TestFile_id" asp-for="TestFile" />
+    <input id="submit_id" type="submit" />
+    <div>
+        @foreach (var row in Model.TestFileOutput)
+        {
+            <p>@row</p>
+        }
+    </div>
+</form>
+<p></p>

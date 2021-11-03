@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tsinterview2-deployment
+  labels:
+    app: tsinterview2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tsinterview2
+  template:
+    metadata:
+      labels:
+        app: tsinterview2
+    spec:
+      containers:
+      - name: tsinterview2
+        image: 381006465834.dkr.ecr.us-east-1.amazonaws.com/tsinterview2:latest
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 80
