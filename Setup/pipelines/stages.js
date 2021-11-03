@@ -1,6 +1,6 @@
 node{
     stage("Git Clone"){
-        git url: 'https://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@github.com/tjdowns81/WebTetrisEngine.git'
+        git url: 'https://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@github.com/tjdowns81/TSDemo.git'
     }
     
     stage("Docker Build"){
